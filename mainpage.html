@@ -29,6 +29,19 @@ iframe{
 }
 
     </style>
+
+<script>
+  function addItem() {
+   var newItem = document.createElement("div");
+    newItem.innerHTML = document.getElementById("box").value;
+    newItem.onclick = removeItem;
+    document.getElementById("list").appendChild(newItem);
+   }
+  function removeItem() {
+   document.getElementById("list").removeChild(this);
+  }
+ </script>
+
 </head>
 
 <body>
@@ -84,7 +97,7 @@ leaving an expanse of dust and dirt</p>
 
 <div style="background-color: brown; height:475px; width: 510px; text-align: center; position: absolute; top: 545px; margin-left: 5px;">
 <h2 style="color: forestgreen;">Iceland</h2>
-<img src="iceland.jpeg"
+<img src="iceland.jpeg">
 </div>
 
 <div style="width: 405px; float: right; position: absolute; bottom: -0.275px; right: -425px; background-color:royalblue;">
@@ -113,6 +126,15 @@ for their child.</p>
   <img src="iceland2.jpg" style="width: 470px; height: 480px;">
 </div>
 
+
+<p>My Favorite Places! </p>
+<br/>
+<input style="width: 200px; height: 200px"; type="text" id="box" value="Type here to add task"/>
+<br/>
+<br>
+<input style="background-color: blueviolet;"="button" value="DISPLAY" onclick="addItem();"/>
+<br/>
+<div id="list"></div>
 
 <iframe 
 width="350px"
